@@ -1,0 +1,28 @@
+<web-app>
+    <servlet>
+        <servlet-name>SearchBookServlet</servlet-name>
+        <servlet-class>servlets.SearchBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchBookServlet</servlet-name>
+        <url-pattern>/searchBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReserveBookServlet</servlet-name>
+        <servlet-class>servlets.ReserveBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReserveBookServlet</servlet-name>
+        <url-pattern>/reserveBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BorrowHistoryServlet</servlet-name>
+        <servlet-class>servlets.BorrowHistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowHistoryServlet</servlet-name>
+        <url-pattern>/borrowHistory</url-pattern>
+    </servlet-mapping>
+</web-app>

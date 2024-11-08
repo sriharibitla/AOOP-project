@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+   <style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling with Background Image */
+body {
+    background: url("https://i.pinimg.com/736x/83/3f/2c/833f2c82be7a85a2b47ccd8fca660610.jpg") no-repeat center;
+    background-size: cover;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff8c00; /* Orange */
+}
+
+/* Section Headers */
+h2 {
+    color: #388e3c; /* Green */
+    margin-top: 20px;
+    border-bottom: 2px solid #388e3c;
+    padding-bottom: 5px;
+}
+
+/* Forms Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* Label Styling */
+label {
+    margin: 8px 0 4px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+input[type="submit"] {
+    background-color: #ff8c00; /* Orange */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+input[type="submit"]:hover {
+    background-color: #388e3c; /* Green */
+}
+
+/* Form Spacing */
+form + form {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <h1 style="color: orange;">Library Management System</h1>
+
+        <!-- Search Books Form -->
+        <h2>Search Books</h2>
+        <form action="SearchBooksServlet" method="post">
+            <label for="searchTerm">Enter Book Title or Author:</label>
+            <input type="text" id="searchTerm" name="searchTerm" placeholder="e.g., Harry Potter" required>
+            <input type="submit" value="Search">
+        </form>
+
+        <!-- Borrow Book Form -->
+        <h2>Borrow a Book</h2>
+        <form action="BorrowBookServlet" method="post">
+            <label for="bookId">Enter Book ID:</label>
+            <input type="text" id="bookId" name="bookId" placeholder="e.g., 101" required>
+            <label for="userId">Enter Your User ID:</label>
+            <input type="text" id="userId" name="userId" placeholder="e.g., U123" required>
+            <input type="submit" value="Borrow">
+        </form>
+
+        <!-- Return Book Form -->
+        <h2>Return a Book</h2>
+        <form action="ReturnBookServlet" method="post">
+            <label for="returnBookId">Enter Book ID:</label>
+            <input type="text" id="returnBookId" name="returnBookId" placeholder="e.g., 101" required>
+            <label for="returnUserId">Enter Your User ID:</label>
+            <input type="text" id="returnUserId" name="returnUserId" placeholder="e.g., U123" required>
+            <input type="submit" value="Return">
+        </form>
+    </div>
+</body>
+</html>
